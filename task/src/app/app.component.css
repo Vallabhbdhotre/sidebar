@@ -12,15 +12,23 @@ app-side-nav{
     left: 0;
     border-top-color: white;
     width: 48px;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
     background-color: rgb(233, 233, 233);
     height: calc(100% - 4rem);
     overflow-y: scroll;
     white-space: nowrap;
+    transition: all 150ms ease-in;
 }
 ::-webkit-scrollbar{
     display: none;
 }
 .sidewidth{
     width: 250px;
+}
+app-content{
+    width: calc(100%-250px);
+    height: calc(100%-4rem);
+    position: absolute;
+    top: 4rem;
+    left: 250px;
 }

@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./side-nav.component.css']
 })
 export class SideNavComponent {
- @Input() sideNavStatus :boolean =false
+ @Input() sideNavStatus :boolean =true
 }

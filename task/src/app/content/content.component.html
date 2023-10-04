@@ -1,0 +1,58 @@
+<form [formGroup]="formData">
+  <div class="header">
+    <h3>Create New Quote</h3>
+  </div>
+  <div class="container">
+    <div class="fildes">
+      <label class="label" for="quoteNumber">Quote Number</label><br />
+      <input class="input" type="number" formControlName="quoteNumber" />
+    </div>
+    <div class="fildes">
+      <label class="label" for="location">Location</label><br />
+      <input class="input" type="text" formControlName="location" />
+    </div>
+    <div class="fildes">
+      <label class="label" for="eConsumption">Energy Consumption(KWh)</label
+      ><br />
+      <input class="input" type="number" formControlName="eConsumption" />
+    </div>
+    <div class="fildes">
+      <label class="label" for="billInfo">Billing Information</label><br />
+      <input class="input" type="text" formControlName="billInfo" />
+    </div>
+    <div class="fildes">
+      <label class="label" for="avaiRoofSpace">Available Roof Space</label
+      ><br />
+      <input class="input" type="text" formControlName="avaiRoofSpace" />
+    </div>
+    <div class="fildes">
+      <label class="label" for="bStorage">Battery Storage</label><br />
+      <input class="input" type="text" formControlName="bStorage" />
+    </div>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th class="heading">Item</th>
+        <th class="heading">Unit Price</th>
+        <th class="heading">Quantity</th>
+        <th class="heading">Discount</th>
+        <th class="heading">Amount</th>
+      </tr>
+    </thead>
+    <tbody formArrayName="productBillInfo">
+      <tr
+        *ngFor="let product of productBillInfoArray.controls; let i = index"
+        [formGroupName]="i"
+      >
+        <td><input style="border: none; border-bottom:1px solid black; outline:none" type="text" formControlName="item" /></td>
+        <td><input type="number" formControlName="unitPrice" /></td>
+        <td><input type="number" formControlName="quantity" /></td>
+        <td><input type="number" formControlName="discount" /></td>
+        <td><input type="number" formControlName="amount" /></td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="btn" (click)="addProduct()">Add Items</button>
+</form>

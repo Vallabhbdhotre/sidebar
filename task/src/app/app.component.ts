@@ -7,5 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class AppComponent {
   title = 'task';
-@Input() sideNavStatus: boolean =false
+@Input() sideNavStatus: boolean =true
 }

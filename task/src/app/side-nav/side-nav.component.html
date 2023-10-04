@@ -1,70 +1,68 @@
-<div class="sidenav"
- [ngClass]="{
-    'sidewidth':sideNavStatus
- }">
-  <p style="font-weight: 500; font-size: medium; margin: 10px" class="p-3" *ngIf="sideNavStatus">
-    Lorem Ipsum
+<p
+  style="font-weight: 500; font-size: medium; margin: 10px"
+  class="p-3"
+  *ngIf="sideNavStatus"
+>
+  Lorem Ipsum
+</p>
+<div class="dropdown p-2">
+  <div
+    class="dropdown-toggle"
+    id="dropList"
+    type="button"
+    data-bs-toggle="dropdown"
+  >
+    <span class="material-symbols-outlined p-2"> dashboard </span>
+    Dashboard
+  </div>
+  <div
+    class="dropdown-menu"
+    style="
+      background-color: rgb(233, 233, 233);
+      border: none;
+      margin-left: 10px !important;
+    "
+  >
+    <a class="dropdown-item" href="#">lorem ipsum</a>
+    <a class="dropdown-item" href="#">lorem ipsum</a>
+    <a class="dropdown-item" href="#">lorem ipsum</a>
+  </div>
+</div>
+<div class="filds p-2">
+  <p class="pointer">
+    <span class="material-symbols-outlined p-2"> handshake </span>Onboarding
   </p>
-  <div class="dropdown p-2">
-    <div
-      class="dropdown-toggle"
-      id="dropList"
-      type="button"
-      data-bs-toggle="dropdown"
-    >
-      <span class="material-symbols-outlined p-2"> dashboard </span>
-      Dashboard
-    </div>
-    <div
-      class="dropdown-menu"
-      style="
-        background-color: rgb(233, 233, 233);
-        border: none;
-        margin-left: 10px !important;
-      "
-    >
-      <a class="dropdown-item" href="#">lorem ipsum</a>
-      <a class="dropdown-item" href="#">lorem ipsum</a>
-      <a class="dropdown-item" href="#">lorem ipsum</a>
-    </div>
-  </div>
-  <div class="filds p-2">
-    <p class="pointer">
-      <span class="material-symbols-outlined p-2"> handshake </span>Onboarding
-    </p>
-  </div>
-  <div class="filds p-2">
-    <p class="pointer">
-      <span class="material-symbols-outlined p-2"> category </span>Product and
-      category
-    </p>
-  </div>
-  <div class="filds p-2">
-    <p class="pointer">
-      <span class="material-symbols-outlined p-2"> inventory_2 </span>Inventory
-    </p>
-  </div>
-  <div class="filds p-2">
-    <p class="pointer">
-      <span class="material-symbols-outlined p-2"> group </span>User Management
-    </p>
-  </div>
-  <div class="filds p-2">
-    <p class="pointer">
-      <span class="material-symbols-outlined p-2"> list_alt </span>Order
-      Management
-    </p>
-  </div>
-  <div class="filds p-2">
-    <p class="pointer">
-      <span class="material-symbols-outlined p-2"> currency_rupee </span
-      >Transaction
-    </p>
-  </div>
-  <div class="filds p-2">
-    <p class="pointer">
-      <span class="material-symbols-outlined p-2"> table_chart </span>Master
-      Table
-    </p>
-  </div>
+</div>
+<div class="filds p-2">
+  <p class="pointer">
+    <span class="material-symbols-outlined p-2"> category </span>Product and
+    category
+  </p>
+</div>
+<div class="filds p-2">
+  <p class="pointer">
+    <span class="material-symbols-outlined p-2"> inventory_2 </span>Inventory
+  </p>
+</div>
+<div class="filds p-2">
+  <p class="pointer">
+    <span class="material-symbols-outlined p-2"> group </span>User Management
+  </p>
+</div>
+<div class="filds p-2">
+  <p class="pointer">
+    <span class="material-symbols-outlined p-2"> list_alt </span>Order
+    Management
+  </p>
+</div>
+<div class="filds p-2">
+  <p class="pointer">
+    <span class="material-symbols-outlined p-2"> currency_rupee </span
+    >Transaction
+  </p>
+</div>
+<div class="filds p-2">
+  <p class="pointer">
+    <span class="material-symbols-outlined p-2"> table_chart </span>Master Table
+  </p>
 </div>

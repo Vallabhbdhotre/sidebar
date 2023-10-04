@@ -1,6 +1,12 @@
 <div class="container-fluid">
-  <app-header (sidenavToggled)="sideNavStatus = $event" ></app-header>
+  <app-header (sidenavToggled)="sideNavStatus = $event"></app-header>
   <main>
-    <app-side-nav [sideNavStatus]="sideNavStatus"></app-side-nav>
+    <app-side-nav
+      [sideNavStatus]="sideNavStatus"
+      [ngClass]="{
+        sidewidth: sideNavStatus
+      }"
+    ></app-side-nav>
+    <app-content></app-content>
   </main>
 </div>

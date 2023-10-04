@@ -46,13 +46,30 @@
         *ngFor="let product of productBillInfoArray.controls; let i = index"
         [formGroupName]="i"
       >
-        <td><input style="border: none; border-bottom:1px solid black; outline:none" type="text" formControlName="item" /></td>
-        <td><input type="number" formControlName="unitPrice" /></td>
-        <td><input type="number" formControlName="quantity" /></td>
-        <td><input type="number" formControlName="discount" /></td>
-        <td><input type="number" formControlName="amount" /></td>
+        <td><input style="border: none; border-bottom:1px solid black; outline:none;margin-left:0.3rem" type="text" formControlName="item" /></td>
+        <td><input style="border: none; border-bottom:1px solid black; outline:none;margin-left:0.3rem" type="number" formControlName="unitPrice" /></td>
+        <td><input style="border: none; border-bottom:1px solid black; outline:none;margin-left:0.3rem" type="number" formControlName="quantity" /></td>
+        <td><input style="border: none; border-bottom:1px solid black; outline:none;margin-left:0.3rem" type="number" formControlName="discount" /></td>
+        <td><input style="border: none; border-bottom:1px solid black; outline:none;margin-left:0.3rem" type="number" formControlName="amount" /></td>
       </tr>
     </tbody>
   </table>
-  <button class="btn" (click)="addProduct()">Add Items</button>
+  <!-- <div class="pbody">
+    <div class="pcontainer" formArrayName="productBillInfo">
+      <div class="pFields" *ngFor="let product of productBillInfoArray.controls; let i = index" [formGroupName]="i">
+        <label for=""> Item</label>
+        <input  type="text" formControlName="item" />
+        <label for=""> Price</label>
+        <input type="number" formControlName="unitPrice" />
+        <label for=""> Quantity</label>
+        <input type="number" formControlName="quantity" />
+        <label for="">Discount</label>
+        <input type="number" formControlName="discount" />
+        <label for=""> Amount</label>
+        <input type="number" formControlName="amount" />
+      </div>
+    </div>
+    <button class="btn" (click)="addProduct()">Add Items</button>
+  </div> -->
+  <button class="btn" [disabled]="productBillInfoArray.invalid" (click)="addProduct()">Add Items</button>
 </form>

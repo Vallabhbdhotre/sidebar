@@ -31,4 +31,12 @@ app-content{
     position: absolute;
     top: 4rem;
     left: 250px;
+    transition: all 150ms ease-in;
+}
+.content{
+   
+    position: absolute;
+    top: 4rem;
+    left: 48px;
+    
 }

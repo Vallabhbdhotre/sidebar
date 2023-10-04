@@ -7,6 +7,8 @@
         sidewidth: sideNavStatus
       }"
     ></app-side-nav>
-    <app-content></app-content>
+    <app-content [ngClass]="{
+      'content': !sideNavStatus
+    }"></app-content>
   </main>
 </div>
